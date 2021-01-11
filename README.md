@@ -69,7 +69,7 @@ query {
 
 GraphQLServer => query => resolver => schema.graphql => result
 
-## schema.graphsql
+## schema.graphql
 
 ### 3 types of predefined schema
 
