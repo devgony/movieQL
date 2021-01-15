@@ -69,7 +69,9 @@ query {
 
 ## 2. process
 
-GraphQLServer => `query => resolver => schema.graphql` => result
+`query` => GraphQLServer => `resolver` => `schema.graphql` => result
+
+- default GraphQLServer playground = http://localhost:4000
 
 ## 3. types of predefined schema
 
@@ -103,4 +105,4 @@ query {
 }
 ```
 
-API: yts.am/api/v2/list_movies.json
+used API: yts.am/api/v2/list_movies.json

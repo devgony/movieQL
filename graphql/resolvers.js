@@ -7,6 +7,7 @@ import {
   addMovie,
 } from "./db";
 
+// api version
 const resolvers = {
   Query: {
     movies: (_, { limit, rating }) => getMovies(limit, rating),
@@ -15,6 +16,7 @@ const resolvers = {
   },
 };
 
+// practice syntax version
 // const resolvers = {
 //   Query: {
 //     movies: () => getMovies(),
