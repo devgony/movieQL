@@ -1,8 +1,6 @@
 # movieQL
 
-Movie API with GrapQL
-
-# Benefit of graphQL
+Movie API with GrapQL Server
 
 ## 0. pre-installation
 
@@ -12,21 +10,25 @@ npm i -g babel-cli
 npm i babel-cli babel-preset-env babel-preset-stage-3 --dev
 ```
 
-## 1. overfetching
+## 1. Benefit of graphQL
+
+### 1.1. overfetching
 
 /users/1/ GET
 To get only username, get all?
-=> get only what he need
 
-## 2. underfetching
+=> With graphql, get only what we need
+
+### 1.2. underfetching
 
 To init, request 3 time?
 /feed/
 /notifications/
 /user/1/
-=> one endpoint
 
-```
+=> only one endpoint
+
+```typescript
 // #send
 query {
     feed {
@@ -65,23 +67,23 @@ query {
 }
 ```
 
-## resolver
+## 2. process
 
-GraphQLServer => query => resolver => schema.graphql => result
+GraphQLServer => `query => resolver => schema.graphql` => result
 
-## schema.graphql
-
-### 3 types of predefined schema
+## 3. types of predefined schema
 
 query: select
+
 mutation: DML
+
 subscription
 
-### ! means required
+## ! means required (like typescript)
 
 ## overfetching example
 
-```
+```typescript
 "message": "Field \"person\" of type \"Nicolas!\" must have a selection of subfields. Did you mean \"person { ... }\"?",
 => on playground, fetch only age
 query {
@@ -93,7 +95,7 @@ query {
 
 ## Query with argument
 
-```
+```typescript
 query {
     person(id: 1) {
         name
@@ -101,4 +103,4 @@ query {
 }
 ```
 
-yts.am/api/v2/list_movies.json
+API: yts.am/api/v2/list_movies.json
